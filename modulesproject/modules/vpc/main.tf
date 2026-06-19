@@ -5,3 +5,10 @@ resource "aws_vpc" "this" {
     Name = var.vpc_name
   }
 }
+
+resource "aws_subnet" "subnet1" {
+  cidr_block = var.subnet_cidr
+  availability_zone = "ap-south-1a"
+  subnet_id = var.subnet_cidr
+  map_public_ip_on_launch = true
+}
